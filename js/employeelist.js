@@ -1,9 +1,9 @@
-localStorage['serviceURL'] =  "http://service.topprinter.org/manastoryrest"; 
+localStorage['serviceURL'] =  "http://service.topprinter.org/manastory-rest"; 
 var serviceURL = localStorage['serviceURL'];
 var img = "http://service.topprinter.org/images/";
-//$(document).ajaxError(function(event, request, settings) {
-//	alert("Not connected internet. Try again..");
-//});
+$(document).ajaxError(function(event, request, settings) {
+	alert("Not connected internet. Try again..");
+});
 		$.ajax({
 	        url : serviceURL,
 	        dataType : 'json',
@@ -19,7 +19,7 @@ var img = "http://service.topprinter.org/images/";
 					'<p class="line2">' + employee.descriptionkey + '</p><figcaption><figure></li>' );
 	            });
 				$.each(array, function(i, employee) {
-			$('#List').append('<div class="cover cover3"> <a href="?id=' + employee.id + '">' +
+			$('#List').append('<div class="cover"> <a href="details.html?id=' + employee.id + '">' +
 					'<img class="img-top" src="'+ img + employee.imgkey + '" />' +
 					'<p>' + employee.title + '</p></a></div>' );
 		});
