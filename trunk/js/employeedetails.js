@@ -1,4 +1,4 @@
-localStorage['serviceURL'] =  "http://service.topprinter.org/manastoryrest";  
+localStorage['serviceURL'] =  "http://service.topprinter.org/manastory-rest";  
 var serviceURL = localStorage['serviceURL'];
 var img = "http://service.topprinter.org/images/";
 var id = getUrlVars()["id"];
